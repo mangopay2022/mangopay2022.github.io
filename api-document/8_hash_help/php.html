@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>sign 签名算法（PHP）版本 | 🥭Mango</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="Just payments">
+    
+    <link rel="preload" href="/assets/css/0.styles.9825735b.css" as="style"><link rel="preload" href="/assets/js/app.66f94284.js" as="script"><link rel="preload" href="/assets/js/2.2defd20b.js" as="script"><link rel="preload" href="/assets/js/20.3c234a2c.js" as="script"><link rel="prefetch" href="/assets/js/10.df4b4478.js"><link rel="prefetch" href="/assets/js/11.f3515d91.js"><link rel="prefetch" href="/assets/js/12.e81245b0.js"><link rel="prefetch" href="/assets/js/13.f01088cf.js"><link rel="prefetch" href="/assets/js/14.6c4d5fd1.js"><link rel="prefetch" href="/assets/js/15.bab753ba.js"><link rel="prefetch" href="/assets/js/16.9dc3711f.js"><link rel="prefetch" href="/assets/js/17.5c420100.js"><link rel="prefetch" href="/assets/js/18.c494d4c9.js"><link rel="prefetch" href="/assets/js/19.969627bf.js"><link rel="prefetch" href="/assets/js/21.a0b4ca7d.js"><link rel="prefetch" href="/assets/js/22.a7d603e4.js"><link rel="prefetch" href="/assets/js/23.b5e76cd9.js"><link rel="prefetch" href="/assets/js/24.50c00a3c.js"><link rel="prefetch" href="/assets/js/25.1f6766ef.js"><link rel="prefetch" href="/assets/js/26.3fc388d5.js"><link rel="prefetch" href="/assets/js/27.346980a2.js"><link rel="prefetch" href="/assets/js/3.621e715e.js"><link rel="prefetch" href="/assets/js/4.26f73e91.js"><link rel="prefetch" href="/assets/js/5.5dcec586.js"><link rel="prefetch" href="/assets/js/6.f2a96706.js"><link rel="prefetch" href="/assets/js/7.862c29f2.js"><link rel="prefetch" href="/assets/js/8.1092e288.js"><link rel="prefetch" href="/assets/js/9.dd4d3b12.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.9825735b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">🥭Mango</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/api-document/" class="nav-link router-link-active">
+  Mango 对接文档介绍
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/api-document/" class="nav-link router-link-active">
+  Mango 对接文档介绍
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>对接接口</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/api-document/1_deposit/1_deposit_func1.html" class="sidebar-link">代收</a></li><li><a href="/api-document/1_deposit/3_deposit_callback.html" class="sidebar-link">代收回调_商户接口说明</a></li><li><a href="/api-document/2_withdrawal/1_withdrawal_bankcard.html" class="sidebar-link">提款代付_銀行卡</a></li><li><a href="/api-document/2_withdrawal/2_withdrawal_UPI.html" class="sidebar-link">提款代付_UPI</a></li><li><a href="/api-document/2_withdrawal/3_withdrawal_callback.html" class="sidebar-link">提款代付回调_商户接口说明</a></li><li><a href="/api-document/5_deposit_query/" class="sidebar-link">代收查询</a></li><li><a href="/api-document/6_withdrawal_query/" class="sidebar-link">提款代付查询 (尚未开放 无法使用)</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>SIGN 签名说明</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/api-document/7_sign/orderSign.html" class="sidebar-link">代收/提款 sign 签名规则</a></li><li><a href="/api-document/7_sign/callBackSign.html" class="sidebar-link">回调接口 sign 签名规则</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>代码算法帮助类</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/api-document/8_hash_help/cSharp.html" class="sidebar-link">sign 签名算法（C#）版本</a></li><li><a href="/api-document/8_hash_help/java.html" class="sidebar-link">sign 签名算法（Java）版本</a></li><li><a href="/api-document/8_hash_help/php.html" aria-current="page" class="active sidebar-link">sign 签名算法（PHP）版本</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>银行列表说明</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/api-document/9_bankList/1_bankList_india.html" class="sidebar-link">银行列表 (印度 India)</a></li><li><a href="/api-document/9_bankList/2_bankList_vietnam.html" class="sidebar-link">银行列表 (越南 Vietnam) </a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="sign-签名算法-php-版本"><a href="#sign-签名算法-php-版本" class="header-anchor">#</a> sign 签名算法（PHP）版本</h1> <h3 id="调用方式"><a href="#调用方式" class="header-anchor">#</a> 调用方式</h3> <div class="language-PHP extra-class"><pre class="language-php"><code> <span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
+    <span class="token keyword">require_once</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'SignUtils.php'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token variable">$su</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SignUtils</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token variable">$su</span><span class="token operator">-&gt;</span><span class="token function">SetCallbackUrl</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'签名'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token variable">$su</span><span class="token operator">-&gt;</span><span class="token function">SetMerchantNumber</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'2'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token variable">$su</span><span class="token operator">-&gt;</span><span class="token function">SetMerchantOrderNumber</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'3'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token variable">$su</span><span class="token operator">-&gt;</span><span class="token function">SetPaymentMethod</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'4'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token variable">$su</span><span class="token operator">-&gt;</span><span class="token function">SetPaymentPlatform</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'5'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token variable">$su</span><span class="token operator">-&gt;</span><span class="token function">SetRequestedAmount</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'6'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token variable">$su</span><span class="token operator">-&gt;</span><span class="token function">SetCustomerRequestedIp</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'7'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">echo</span> <span class="token string single-quoted-string">'&lt;h1&gt;'</span><span class="token operator">.</span><span class="token variable">$su</span><span class="token operator">-&gt;</span><span class="token function">BuildSign</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'Test'</span><span class="token punctuation">)</span><span class="token operator">.</span><span class="token string single-quoted-string">'&lt;/h1&gt;'</span><span class="token punctuation">;</span>
+<span class="token delimiter important">?&gt;</span></span>
+</code></pre></div><h3 id="sign-算法帮助类"><a href="#sign-算法帮助类" class="header-anchor">#</a> sign 算法帮助类</h3> <div class="language-PHP extra-class"><pre class="language-php"><code><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
+<span class="token keyword">class</span> <span class="token class-name-definition class-name">SignUtils</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">protected</span> <span class="token variable">$values</span> <span class="token operator">=</span> <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">SetCallbackUrl</span><span class="token punctuation">(</span><span class="token variable">$inputValue</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">values</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'callbackUrl'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token variable">$inputValue</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>    
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">SetMerchantNumber</span><span class="token punctuation">(</span><span class="token variable">$inputValue</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">values</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'merchantNumber'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token variable">$inputValue</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">SetMerchantOrderNumber</span><span class="token punctuation">(</span><span class="token variable">$inputValue</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">values</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'merchantOrderNumber'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token variable">$inputValue</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">SetPaymentMethod</span><span class="token punctuation">(</span><span class="token variable">$inputValue</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">values</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'paymentMethod'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token variable">$inputValue</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">SetPaymentPlatform</span><span class="token punctuation">(</span><span class="token variable">$inputValue</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">values</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'paymentPlatform'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token variable">$inputValue</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">SetRequestedAmount</span><span class="token punctuation">(</span><span class="token variable">$inputValue</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">values</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'requestedAmount'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token variable">$inputValue</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">SetCustomerRequestedIp</span><span class="token punctuation">(</span><span class="token variable">$inputValue</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">values</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'customerRequestedIp'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token variable">$inputValue</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">/// &lt;summary&gt;</span>
+    <span class="token comment">/// 签名字符串</span>
+    <span class="token comment">/// &lt;/summary&gt;</span>
+    <span class="token comment">/// &lt;param name=&quot;prestr&quot;&gt;需要签名的字符串&lt;/param&gt;</span>
+    <span class="token comment">/// &lt;param name=&quot;key&quot;&gt;密钥&lt;/param&gt;</span>
+    <span class="token comment">/// &lt;returns&gt;签名结果&lt;/returns&gt;</span>
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">Sign</span><span class="token punctuation">(</span><span class="token variable">$prestr</span><span class="token punctuation">,</span> <span class="token variable">$key</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token variable">$prestr</span> <span class="token operator">.=</span> <span class="token string double-quoted-string">&quot;&amp;merchantKey=&quot;</span><span class="token operator">.</span><span class="token variable">$key</span><span class="token punctuation">;</span>
+        <span class="token variable">$string</span> <span class="token operator">=</span> <span class="token function">md5</span><span class="token punctuation">(</span><span class="token variable">$prestr</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token function">strtoupper</span><span class="token punctuation">(</span><span class="token variable">$string</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">/// &lt;summary&gt;</span>
+    <span class="token comment">/// 验证签名</span>
+    <span class="token comment">/// &lt;/summary&gt;</span>
+    <span class="token comment">/// &lt;param name=&quot;prestr&quot;&gt;需要签名的字符串&lt;/param&gt;</span>
+    <span class="token comment">/// &lt;param name=&quot;sign&quot;&gt;签名结果&lt;/param&gt;</span>
+    <span class="token comment">/// &lt;param name=&quot;key&quot;&gt;密钥&lt;/param&gt;</span>
+    <span class="token comment">/// &lt;returns&gt;验证结果&lt;/returns&gt;</span>
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">Verify</span><span class="token punctuation">(</span><span class="token variable">$prestr</span><span class="token punctuation">,</span> <span class="token variable">$sign</span><span class="token punctuation">,</span> <span class="token variable">$key</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token variable">$mysign</span> <span class="token operator">=</span> <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token function">Sign</span><span class="token punctuation">(</span><span class="token variable">$prestr</span><span class="token punctuation">,</span> <span class="token variable">$key</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token variable">$mysign</span> <span class="token operator">==</span> <span class="token variable">$sign</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token constant boolean">true</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token constant boolean">false</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">/// &lt;summary&gt;</span>
+    <span class="token comment">/// 生成请求时的签名</span>
+    <span class="token comment">/// &lt;/summary&gt;</span>
+    <span class="token comment">/// &lt;param name=&quot;key&quot;&gt;&lt;/param&gt;</span>
+    <span class="token comment">/// &lt;returns&gt;签名结果&lt;/returns&gt;</span>
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">BuildSign</span><span class="token punctuation">(</span><span class="token variable">$key</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">//按字典序排序参数</span>
+        <span class="token function">ksort</span><span class="token punctuation">(</span><span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">values</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//把数组所有元素，按照“参数=参数值”的模式用“&amp;”字符拼接成字符串</span>
+        <span class="token variable">$prestr</span> <span class="token operator">=</span> <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token function">CreateLinkString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//把最终的字符串签名，获得签名结果</span>
+        <span class="token variable">$mysign</span> <span class="token operator">=</span> <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token function">Sign</span><span class="token punctuation">(</span><span class="token variable">$prestr</span><span class="token punctuation">,</span> <span class="token variable">$key</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token variable">$mysign</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">/// &lt;summary&gt;</span>
+    <span class="token comment">/// 把数组所有元素，按照“参数=参数值”的模式用“&amp;”字符拼接成字符串</span>
+    <span class="token comment">/// &lt;/summary&gt;</span>
+    <span class="token comment">/// &lt;returns&gt;拼接完成以后的字符串&lt;/returns&gt;</span>
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">CreateLinkString</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token variable">$prestr</span> <span class="token operator">=</span> <span class="token string double-quoted-string">&quot;&quot;</span><span class="token punctuation">;</span>
+        <span class="token keyword">foreach</span> <span class="token punctuation">(</span><span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">values</span> <span class="token keyword">as</span> <span class="token variable">$k</span> <span class="token operator">=&gt;</span> <span class="token variable">$v</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token variable">$prestr</span> <span class="token operator">.=</span> <span class="token variable">$k</span> <span class="token operator">.</span> <span class="token string double-quoted-string">&quot;=&quot;</span> <span class="token operator">.</span> <span class="token variable">$v</span> <span class="token operator">.</span> <span class="token string double-quoted-string">&quot;&amp;&quot;</span><span class="token punctuation">;</span>
+            <span class="token comment">//if($k != &quot;sign&quot; &amp;&amp; $v != &quot;&quot; &amp;&amp; !is_array($v))</span>
+            <span class="token comment">//{</span>
+            <span class="token comment">//    $prestr .= $k . &quot;=&quot; . $v . &quot;&amp;&quot;;</span>
+            <span class="token comment">//}</span>
+        <span class="token punctuation">}</span>        
+        <span class="token variable">$prestr</span> <span class="token operator">=</span> <span class="token function">trim</span><span class="token punctuation">(</span><span class="token variable">$prestr</span><span class="token punctuation">,</span> <span class="token string double-quoted-string">&quot;&amp;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token variable">$prestr</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">/// &lt;summary&gt;</span>
+    <span class="token comment">/// 把数组所有元素，按照“参数=参数值”的模式用“&amp;”字符拼接成字符串，并对参数值做urlencode</span>
+    <span class="token comment">/// &lt;/summary&gt;</span>
+    <span class="token comment">/// &lt;param name=&quot;code&quot;&gt;字符编码&lt;/param&gt;</span>
+    <span class="token comment">/// &lt;returns&gt;拼接完成以后的字符串&lt;/returns&gt;</span>
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">CreateLinkStringUrlencode</span><span class="token punctuation">(</span><span class="token variable">$code</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token variable">$prestr</span> <span class="token operator">=</span> <span class="token string double-quoted-string">&quot;&quot;</span><span class="token punctuation">;</span>
+        <span class="token keyword">foreach</span> <span class="token punctuation">(</span><span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">values</span> <span class="token keyword">as</span> <span class="token variable">$k</span> <span class="token operator">=&gt;</span> <span class="token variable">$v</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>            
+            <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token variable">$code</span> <span class="token operator">==</span> <span class="token string single-quoted-string">'gb2312+'</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                <span class="token comment">//GB2312空格编码为+</span>
+                <span class="token variable">$prestr</span> <span class="token operator">.=</span> <span class="token variable">$k</span> <span class="token operator">.</span> <span class="token string double-quoted-string">&quot;=&quot;</span> <span class="token operator">.</span> <span class="token function">urlencode</span><span class="token punctuation">(</span><span class="token variable">$v</span><span class="token punctuation">)</span> <span class="token operator">.</span> <span class="token string double-quoted-string">&quot;&amp;&quot;</span><span class="token punctuation">;</span>
+                <span class="token comment">//解码函数urldecode();</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token variable">$code</span> <span class="token operator">==</span> <span class="token string single-quoted-string">'gb2312%20'</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                <span class="token comment">//GB2312空格编码为%20</span>
+                <span class="token variable">$prestr</span> <span class="token operator">.=</span> <span class="token variable">$k</span> <span class="token operator">.</span> <span class="token string double-quoted-string">&quot;=&quot;</span> <span class="token operator">.</span> <span class="token function">rawurlencode</span><span class="token punctuation">(</span><span class="token variable">$v</span><span class="token punctuation">)</span> <span class="token operator">.</span> <span class="token string double-quoted-string">&quot;&amp;&quot;</span><span class="token punctuation">;</span>
+                <span class="token comment">//解码函数rawurldecode();</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token variable">$code</span> <span class="token operator">==</span> <span class="token string single-quoted-string">'utf-8'</span> <span class="token operator">||</span> <span class="token variable">$code</span> <span class="token operator">==</span> <span class="token string single-quoted-string">'utf8'</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                <span class="token variable">$prestr</span> <span class="token operator">.=</span> <span class="token variable">$k</span> <span class="token operator">.</span> <span class="token string double-quoted-string">&quot;=&quot;</span> <span class="token operator">.</span> <span class="token function">urlencode</span><span class="token punctuation">(</span><span class="token function">mb_convert_encoding</span><span class="token punctuation">(</span><span class="token variable">$v</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'utf-8'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'gb2312'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">.</span> <span class="token string double-quoted-string">&quot;&amp;&quot;</span><span class="token punctuation">;</span>
+                <span class="token comment">//解码函数rawurlencode(mb_convert_encoding($v, 'utf-8', 'gb2312'))</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">else</span>
+            <span class="token punctuation">{</span>
+                <span class="token variable">$prestr</span> <span class="token operator">.=</span> <span class="token variable">$k</span> <span class="token operator">.</span> <span class="token string double-quoted-string">&quot;=&quot;</span> <span class="token operator">.</span> <span class="token variable">$v</span> <span class="token operator">.</span> <span class="token string double-quoted-string">&quot;&amp;&quot;</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token comment">//if($k != &quot;sign&quot; &amp;&amp; $v != &quot;&quot; &amp;&amp; !is_array($v))</span>
+            <span class="token comment">//{</span>
+            <span class="token comment">//    $prestr .= $k . &quot;=&quot; . $v . &quot;&amp;&quot;;</span>
+            <span class="token comment">//}</span>
+        <span class="token punctuation">}</span>        
+        <span class="token variable">$prestr</span> <span class="token operator">=</span> <span class="token function">trim</span><span class="token punctuation">(</span><span class="token variable">$prestr</span><span class="token punctuation">,</span> <span class="token string double-quoted-string">&quot;&amp;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token variable">$prestr</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token delimiter important">?&gt;</span></span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/api-document/8_hash_help/java.html" class="prev">
+        sign 签名算法（Java）版本
+      </a></span> <span class="next"><a href="/api-document/9_bankList/1_bankList_india.html">
+        银行列表 (印度 India)
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.66f94284.js" defer></script><script src="/assets/js/2.2defd20b.js" defer></script><script src="/assets/js/20.3c234a2c.js" defer></script>
+  </body>
+</html>
