@@ -1,30 +1,218 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>下单查询 | 🥭Mango</title>
-    <meta name="generator" content="VuePress 1.9.7">
-    
-    <meta name="description" content="Just payments">
-    
-    <link rel="preload" href="/assets/css/0.styles.9825735b.css" as="style"><link rel="preload" href="/assets/js/app.195ffeed.js" as="script"><link rel="preload" href="/assets/js/2.2defd20b.js" as="script"><link rel="preload" href="/assets/js/14.0d9d93e7.js" as="script"><link rel="prefetch" href="/assets/js/10.944c90f7.js"><link rel="prefetch" href="/assets/js/11.f3515d91.js"><link rel="prefetch" href="/assets/js/12.e81245b0.js"><link rel="prefetch" href="/assets/js/13.bba1cd0a.js"><link rel="prefetch" href="/assets/js/15.96a3c3e5.js"><link rel="prefetch" href="/assets/js/16.9dc3711f.js"><link rel="prefetch" href="/assets/js/17.ab1b4723.js"><link rel="prefetch" href="/assets/js/18.e68cb741.js"><link rel="prefetch" href="/assets/js/19.6b27ea85.js"><link rel="prefetch" href="/assets/js/20.4980df74.js"><link rel="prefetch" href="/assets/js/21.be08866d.js"><link rel="prefetch" href="/assets/js/22.d731972a.js"><link rel="prefetch" href="/assets/js/23.33205887.js"><link rel="prefetch" href="/assets/js/24.bf081aaa.js"><link rel="prefetch" href="/assets/js/25.e25496d6.js"><link rel="prefetch" href="/assets/js/26.bde790af.js"><link rel="prefetch" href="/assets/js/27.e9435ddb.js"><link rel="prefetch" href="/assets/js/28.ff666c6f.js"><link rel="prefetch" href="/assets/js/3.1816c744.js"><link rel="prefetch" href="/assets/js/4.26f73e91.js"><link rel="prefetch" href="/assets/js/5.5dcec586.js"><link rel="prefetch" href="/assets/js/6.f2a96706.js"><link rel="prefetch" href="/assets/js/7.862c29f2.js"><link rel="prefetch" href="/assets/js/8.a00e0b53.js"><link rel="prefetch" href="/assets/js/9.9ebcee6b.js">
-    <link rel="stylesheet" href="/assets/css/0.styles.9825735b.css">
-  </head>
-  <body>
-    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">🥭Mango</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
-  主页
-</a></div><div class="nav-item"><a href="/api-document/" class="nav-link router-link-active">
-  Mango 对接文档介绍
-</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
-  主页
-</a></div><div class="nav-item"><a href="/api-document/" class="nav-link router-link-active">
-  Mango 对接文档介绍
-</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>对接接口</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/api-document/1_deposit/1_deposit_func1.html" class="sidebar-link">代收</a></li><li><a href="/api-document/1_deposit/3_deposit_callback.html" class="sidebar-link">代收回调_商户接口说明</a></li><li><a href="/api-document/2_withdrawal/1_withdrawal_bankcard.html" class="sidebar-link">提款代付_銀行卡</a></li><li><a href="/api-document/2_withdrawal/2_withdrawal_UPI.html" class="sidebar-link">提款代付_UPI</a></li><li><a href="/api-document/2_withdrawal/3_withdrawal_callback.html" class="sidebar-link">提款代付回调_商户接口说明</a></li><li><a href="/api-document/5_deposit_query/" aria-current="page" class="active sidebar-link">代收查询</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/api-document/6_withdrawal_query/" class="sidebar-link">提款代付查询 (尚未开放 无法使用)</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>SIGN 签名说明</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/api-document/7_sign/orderSign.html" class="sidebar-link">代收/提款 sign 签名规则</a></li><li><a href="/api-document/7_sign/callBackSign.html" class="sidebar-link">回调接口 sign 签名规则</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>代码算法帮助类</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/api-document/8_hash_help/cSharp.html" class="sidebar-link">sign 签名算法（C#）版本</a></li><li><a href="/api-document/8_hash_help/java.html" class="sidebar-link">sign 签名算法（Java）版本</a></li><li><a href="/api-document/8_hash_help/php.html" class="sidebar-link">sign 签名算法（PHP）版本</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>银行列表说明</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/api-document/9_bankList/1_bankList_india.html" class="sidebar-link">银行列表 (印度 India)</a></li><li><a href="/api-document/9_bankList/2_bankList_vietnam.html" class="sidebar-link">银行列表 (越南 Vietnam) </a></li><li><a href="/api-document/9_bankList/3_bankList_thailand.html" class="sidebar-link">银行列表 (泰国 Thailand) </a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="下单查询"><a href="#下单查询" class="header-anchor">#</a> 下单查询</h1> <h3 id="endpoint"><a href="#endpoint" class="header-anchor">#</a> Endpoint</h3> <div class="language- extra-class"><pre class="language-text"><code>GET https://mg6956.com/api/depositquery
-</code></pre></div><h3 id="request-parameters"><a href="#request-parameters" class="header-anchor">#</a> Request Parameters</h3> <table><thead><tr><th>URL Parameters</th> <th>Desc</th> <th>Required</th></tr></thead> <tbody><tr><td>systemOrderNumber</td> <td>系统订单号 (与商户订单号至少传入一个)</td> <td></td></tr> <tr><td>merchantOrderNumber</td> <td>商户订单号 (与系统订单号至少传入一个)</td> <td></td></tr> <tr><td>merchantNumber</td> <td>商户编号</td> <td>*</td></tr> <tr><td>paymentMethod</td> <td>1=四方支付, 2=印度扫码, 7=銀行卡</td> <td>*</td></tr> <tr><td>sign</td> <td>签名认证</td> <td>*</td></tr></tbody></table> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>系统订单号与商户订单号至少传入一个</p></div> <h3 id="签名方法"><a href="#签名方法" class="header-anchor">#</a> 签名方法</h3> <ol><li>参数列表中，除去 sign 参数外，其他所有参数都要参与签名。</li> <li>参与签名的参数顺序按照首字母从小到大（a 到 z）的顺序排列， 如果遇到相同首字母则按第二个字母</li> <li>从小到大的顺序排列，以此类推。如果参数值为空则不参与签名，merchantKey参数追加到所有参数最后。 4、 签名以 MD5 32位大写加密。</li></ol> <h3 id="參與簽名範例"><a href="#參與簽名範例" class="header-anchor">#</a> 參與簽名範例</h3> <p>参与签名的参数有：merchantNumber、merchantOrderNumber、systemOrderNumber、paymentMethod、merchantKey</p> <div class="language- extra-class"><pre class="language-text"><code>merchantNumber=19999&amp;merchantOrderNumber=tOrder202210170001&amp;paymentMethod=2&amp;merchantKey=128B3002766A60A8E84FAF1559123456
-</code></pre></div><p>以 MD5 Hash 后转大写结果：
-6C376246210819AFC146B8ECE58C9A39</p> <p>將 MD5 Hash 放入 sign 內，使用 GET 進行查詢：</p> <h3 id="request-sample"><a href="#request-sample" class="header-anchor">#</a> Request Sample</h3> <div class="language- extra-class"><pre class="language-text"><code>http://104.208.75.189:59833/api/depositquery?merchantNumber=19999&amp;merchantOrderNumber=tOrder202210170001&amp;paymentMethod=2&amp;&amp;sign=6C376246210819AFC146B8ECE58C9A39
-</code></pre></div><h3 id="response-sample"><a href="#response-sample" class="header-anchor">#</a> Response Sample</h3> <p>请求成功，已完成，回调成功的单</p> <div class="language-json extra-class"><pre class="language-json"><code>Status Code<span class="token operator">:</span> <span class="token number">200</span> OK
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>下单查询 | 🥭Mango</title>
+  <meta name="generator" content="VuePress 1.9.7">
+
+  <meta name="description" content="Just payments">
+
+  <link rel="preload" href="/assets/css/0.styles.9825735b.css" as="style">
+  <link rel="preload" href="/assets/js/app.195ffeed.js" as="script">
+  <link rel="preload" href="/assets/js/2.2defd20b.js" as="script">
+  <link rel="preload" href="/assets/js/14.0d9d93e7.js" as="script">
+  <link rel="prefetch" href="/assets/js/10.944c90f7.js">
+  <link rel="prefetch" href="/assets/js/11.f3515d91.js">
+  <link rel="prefetch" href="/assets/js/12.e81245b0.js">
+  <link rel="prefetch" href="/assets/js/13.bba1cd0a.js">
+  <link rel="prefetch" href="/assets/js/15.96a3c3e5.js">
+  <link rel="prefetch" href="/assets/js/16.9dc3711f.js">
+  <link rel="prefetch" href="/assets/js/17.ab1b4723.js">
+  <link rel="prefetch" href="/assets/js/18.e68cb741.js">
+  <link rel="prefetch" href="/assets/js/19.6b27ea85.js">
+  <link rel="prefetch" href="/assets/js/20.4980df74.js">
+  <link rel="prefetch" href="/assets/js/21.be08866d.js">
+  <link rel="prefetch" href="/assets/js/22.d731972a.js">
+  <link rel="prefetch" href="/assets/js/23.33205887.js">
+  <link rel="prefetch" href="/assets/js/24.bf081aaa.js">
+  <link rel="prefetch" href="/assets/js/25.e25496d6.js">
+  <link rel="prefetch" href="/assets/js/26.bde790af.js">
+  <link rel="prefetch" href="/assets/js/27.e9435ddb.js">
+  <link rel="prefetch" href="/assets/js/28.ff666c6f.js">
+  <link rel="prefetch" href="/assets/js/3.1816c744.js">
+  <link rel="prefetch" href="/assets/js/4.26f73e91.js">
+  <link rel="prefetch" href="/assets/js/5.5dcec586.js">
+  <link rel="prefetch" href="/assets/js/6.f2a96706.js">
+  <link rel="prefetch" href="/assets/js/7.862c29f2.js">
+  <link rel="prefetch" href="/assets/js/8.a00e0b53.js">
+  <link rel="prefetch" href="/assets/js/9.9ebcee6b.js">
+  <link rel="stylesheet" href="/assets/css/0.styles.9825735b.css">
+</head>
+
+<body>
+  <div id="app" data-server-rendered="true">
+    <div class="theme-container">
+      <header class="navbar">
+        <div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img"
+            viewBox="0 0 448 512" class="icon">
+            <path fill="currentColor"
+              d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z">
+            </path>
+          </svg></div> <a href="/" class="home-link router-link-active">
+          <!----> <span class="site-name">🥭Mango</span>
+        </a>
+        <div class="links">
+          <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value="">
+            <!---->
+          </div>
+          <nav class="nav-links can-hide">
+            <div class="nav-item"><a href="/" class="nav-link">
+                主页
+              </a></div>
+            <div class="nav-item"><a href="/api-document/" class="nav-link router-link-active">
+                Mango 对接文档介绍
+              </a></div>
+            <!---->
+          </nav>
+        </div>
+      </header>
+      <div class="sidebar-mask"></div>
+      <aside class="sidebar">
+        <nav class="nav-links">
+          <div class="nav-item"><a href="/" class="nav-link">
+              主页
+            </a></div>
+          <div class="nav-item"><a href="/api-document/" class="nav-link router-link-active">
+              Mango 对接文档介绍
+            </a></div>
+          <!---->
+        </nav>
+        <ul class="sidebar-links">
+          <li>
+            <section class="sidebar-group depth-0">
+              <p class="sidebar-heading open"><span>对接接口</span>
+                <!---->
+              </p>
+              <ul class="sidebar-links sidebar-group-items">
+                <li><a href="/api-document/1_deposit/1_deposit_func1.html" class="sidebar-link">代收</a></li>
+                <li><a href="/api-document/1_deposit/3_deposit_callback.html" class="sidebar-link">代收回调_商户接口说明</a></li>
+                <li><a href="/api-document/2_withdrawal/1_withdrawal_bankcard.html" class="sidebar-link">提款代付_銀行卡</a>
+                </li>
+                <li><a href="/api-document/2_withdrawal/2_withdrawal_UPI.html" class="sidebar-link">提款代付_UPI</a></li>
+                <li><a href="/api-document/2_withdrawal/3_withdrawal_callback.html"
+                    class="sidebar-link">提款代付回调_商户接口说明</a></li>
+                <li><a href="/api-document/5_deposit_query/" aria-current="page" class="active sidebar-link">代收查询</a>
+                  <ul class="sidebar-sub-headers"></ul>
+                </li>
+                <li><a href="/api-document/6_withdrawal_query/" class="sidebar-link">提款代付查询 (尚未开放 无法使用)</a></li>
+              </ul>
+            </section>
+          </li>
+          <li>
+            <section class="sidebar-group depth-0">
+              <p class="sidebar-heading"><span>SIGN 签名说明</span>
+                <!---->
+              </p>
+              <ul class="sidebar-links sidebar-group-items">
+                <li><a href="/api-document/7_sign/orderSign.html" class="sidebar-link">代收/提款 sign 签名规则</a></li>
+                <li><a href="/api-document/7_sign/callBackSign.html" class="sidebar-link">回调接口 sign 签名规则</a></li>
+              </ul>
+            </section>
+          </li>
+          <li>
+            <section class="sidebar-group depth-0">
+              <p class="sidebar-heading"><span>代码算法帮助类</span>
+                <!---->
+              </p>
+              <ul class="sidebar-links sidebar-group-items">
+                <li><a href="/api-document/8_hash_help/cSharp.html" class="sidebar-link">sign 签名算法（C#）版本</a></li>
+                <li><a href="/api-document/8_hash_help/java.html" class="sidebar-link">sign 签名算法（Java）版本</a></li>
+                <li><a href="/api-document/8_hash_help/php.html" class="sidebar-link">sign 签名算法（PHP）版本</a></li>
+              </ul>
+            </section>
+          </li>
+          <li>
+            <section class="sidebar-group depth-0">
+              <p class="sidebar-heading"><span>银行列表说明</span>
+                <!---->
+              </p>
+              <ul class="sidebar-links sidebar-group-items">
+                <li><a href="/api-document/9_bankList/1_bankList_india.html" class="sidebar-link">银行列表 (印度 India)</a>
+                </li>
+                <li><a href="/api-document/9_bankList/2_bankList_vietnam.html" class="sidebar-link">银行列表 (越南 Vietnam)
+                  </a></li>
+                <li><a href="/api-document/9_bankList/3_bankList_thailand.html" class="sidebar-link">银行列表 (泰国 Thailand)
+                  </a></li>
+              </ul>
+            </section>
+          </li>
+        </ul>
+      </aside>
+      <main class="page">
+        <div class="theme-default-content content__default">
+          <h1 id="下单查询"><a href="#下单查询" class="header-anchor">#</a> 下单查询</h1>
+          <h3 id="endpoint"><a href="#endpoint" class="header-anchor">#</a> Endpoint</h3>
+          <div class="language- extra-class">
+            <pre class="language-text"><code>GET https://mg6956.com/api/depositquery
+</code></pre>
+          </div>
+          <h3 id="request-parameters"><a href="#request-parameters" class="header-anchor">#</a> Request Parameters</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>URL Parameters</th>
+                <th>Desc</th>
+                <th>Required</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>systemOrderNumber</td>
+                <td>系统订单号 (与商户订单号至少传入一个)</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>merchantOrderNumber</td>
+                <td>商户订单号 (与系统订单号至少传入一个)</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>merchantNumber</td>
+                <td>商户编号</td>
+                <td>*</td>
+              </tr>
+              <tr>
+                <td>paymentMethod</td>
+                <td>1=四方支付, 2=印度扫码, 7=銀行卡, 3=银行扫码, 4=ZaloPay, 6=MomoPay</td>
+                <td>*</td>
+              </tr>
+              <tr>
+                <td>sign</td>
+                <td>签名认证</td>
+                <td>*</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="custom-block tip">
+            <p class="custom-block-title">TIP</p>
+            <p>系统订单号与商户订单号至少传入一个</p>
+          </div>
+          <h3 id="签名方法"><a href="#签名方法" class="header-anchor">#</a> 签名方法</h3>
+          <ol>
+            <li>参数列表中，除去 sign 参数外，其他所有参数都要参与签名。</li>
+            <li>参与签名的参数顺序按照首字母从小到大（a 到 z）的顺序排列， 如果遇到相同首字母则按第二个字母</li>
+            <li>从小到大的顺序排列，以此类推。如果参数值为空则不参与签名，merchantKey参数追加到所有参数最后。 4、 签名以 MD5 32位大写加密。</li>
+          </ol>
+          <h3 id="參與簽名範例"><a href="#參與簽名範例" class="header-anchor">#</a> 參與簽名範例</h3>
+          <p>参与签名的参数有：merchantNumber、merchantOrderNumber、systemOrderNumber、paymentMethod、merchantKey</p>
+          <div class="language- extra-class">
+            <pre class="language-text"><code>merchantNumber=19999&amp;merchantOrderNumber=tOrder202210170001&amp;paymentMethod=2&amp;merchantKey=128B3002766A60A8E84FAF1559123456
+</code></pre>
+          </div>
+          <p>以 MD5 Hash 后转大写结果：
+            6C376246210819AFC146B8ECE58C9A39</p>
+          <p>將 MD5 Hash 放入 sign 內，使用 GET 進行查詢：</p>
+          <h3 id="request-sample"><a href="#request-sample" class="header-anchor">#</a> Request Sample</h3>
+          <div class="language- extra-class">
+            <pre class="language-text"><code>https://mg6956.com/api/depositquery?merchantNumber=19999&amp;merchantOrderNumber=tOrder202210170001&amp;paymentMethod=2&amp;&amp;sign=6C376246210819AFC146B8ECE58C9A39
+</code></pre>
+          </div>
+          <h3 id="response-sample"><a href="#response-sample" class="header-anchor">#</a> Response Sample</h3>
+          <p>请求成功，已完成，回调成功的单</p>
+          <div class="language-json extra-class">
+            <pre class="language-json"><code>Status Code<span class="token operator">:</span> <span class="token number">200</span> OK
 <span class="token punctuation">{</span>
     <span class="token property">&quot;code&quot;</span><span class="token operator">:</span> <span class="token string">&quot;S00&quot;</span><span class="token punctuation">,</span>
     <span class="token property">&quot;message&quot;</span><span class="token operator">:</span> <span class="token string">&quot;获取成功&quot;</span><span class="token punctuation">,</span>
@@ -39,7 +227,11 @@
         <span class="token property">&quot;completedAt&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2022-10-15T07:31:55.9744644+05:30&quot;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</code></pre></div><p>请求成功，逾期，超时未付款的单</p> <div class="language-json extra-class"><pre class="language-json"><code>Status Code<span class="token operator">:</span> <span class="token number">200</span> OK
+</code></pre>
+          </div>
+          <p>请求成功，逾期，超时未付款的单</p>
+          <div class="language-json extra-class">
+            <pre class="language-json"><code>Status Code<span class="token operator">:</span> <span class="token number">200</span> OK
 <span class="token punctuation">{</span>
     <span class="token property">&quot;code&quot;</span><span class="token operator">:</span> <span class="token string">&quot;S00&quot;</span><span class="token punctuation">,</span>
     <span class="token property">&quot;message&quot;</span><span class="token operator">:</span> <span class="token string">&quot;获取成功&quot;</span><span class="token punctuation">,</span>
@@ -54,7 +246,11 @@
         <span class="token property">&quot;completedAt&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2022-10-15T08:08:52.8934278+05:30&quot;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</code></pre></div><p>请求成功，下单尚未支付</p> <div class="language-json extra-class"><pre class="language-json"><code>Status Code<span class="token operator">:</span> <span class="token number">200</span> OK
+</code></pre>
+          </div>
+          <p>请求成功，下单尚未支付</p>
+          <div class="language-json extra-class">
+            <pre class="language-json"><code>Status Code<span class="token operator">:</span> <span class="token number">200</span> OK
 <span class="token punctuation">{</span>
     <span class="token property">&quot;code&quot;</span><span class="token operator">:</span> <span class="token string">&quot;S00&quot;</span><span class="token punctuation">,</span>
     <span class="token property">&quot;message&quot;</span><span class="token operator">:</span> <span class="token string">&quot;获取成功&quot;</span><span class="token punctuation">,</span>
@@ -69,7 +265,11 @@
         <span class="token property">&quot;completedAt&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0001-01-01T08:00:00+08:00&quot;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</code></pre></div><p>请求失败:参数错误 / 签名错误</p> <div class="language-json extra-class"><pre class="language-json"><code>Status Code<span class="token operator">:</span> <span class="token number">404</span> Not Found
+</code></pre>
+          </div>
+          <p>请求失败:参数错误 / 签名错误</p>
+          <div class="language-json extra-class">
+            <pre class="language-json"><code>Status Code<span class="token operator">:</span> <span class="token number">404</span> Not Found
 <span class="token punctuation">{</span>
     <span class="token property">&quot;code&quot;</span><span class="token operator">:</span> <span class="token string">&quot;E00&quot;</span><span class="token punctuation">,</span>
     <span class="token property">&quot;message&quot;</span><span class="token operator">:</span> <span class="token string">&quot;商户参数错误&quot;</span><span class="token punctuation">,</span>
@@ -82,15 +282,89 @@
     <span class="token property">&quot;message&quot;</span><span class="token operator">:</span><span class="token string">&quot;签名错误，请检查参数顺序或KEY是否正确&quot;</span><span class="token punctuation">,</span>
     <span class="token property">&quot;data&quot;</span><span class="token operator">:</span><span class="token null keyword">null</span>
 <span class="token punctuation">}</span>
-</code></pre></div><h3 id="response-parameters"><a href="#response-parameters" class="header-anchor">#</a> Response Parameters</h3> <table><thead><tr><th>Parameters</th> <th>Type</th> <th>Desc</th></tr></thead> <tbody><tr><td>code</td> <td>string</td> <td>状态码，S00：查询成功，E00：查询失败</td></tr> <tr><td>message</td> <td>string</td> <td>返回消息说明</td></tr> <tr><td>data</td> <td>object</td> <td>数据对象</td></tr> <tr><td>status</td> <td>int</td> <td>订单状态,-1 未知，0=支付失败，1=支付成功，2=进行中</td></tr> <tr><td>callbackNoticeStatus</td> <td>int</td> <td>回调通知状态,0=未回调，1=回调成功，2=回调失败</td></tr> <tr><td>requestedAmount</td> <td>string</td> <td>提交金额</td></tr> <tr><td>actualAmount</td> <td>string</td> <td>实际到账金额</td></tr> <tr><td>createdAt</td> <td>string</td> <td>订单创建日期</td></tr> <tr><td>completedAt</td> <td>string</td> <td>订单完结日期</td></tr></tbody></table></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
-      ←
-      <a href="/api-document/2_withdrawal/3_withdrawal_callback.html" class="prev">
-        提款代付回调_商户接口说明
-      </a></span> <span class="next"><a href="/api-document/6_withdrawal_query/">
-        提款代付查询 (尚未开放 无法使用)
-      </a>
-      →
-    </span></p></div> </main></div><div class="global-ui"></div></div>
-    <script src="/assets/js/app.195ffeed.js" defer></script><script src="/assets/js/2.2defd20b.js" defer></script><script src="/assets/js/14.0d9d93e7.js" defer></script>
-  </body>
+</code></pre>
+          </div>
+          <h3 id="response-parameters"><a href="#response-parameters" class="header-anchor">#</a> Response Parameters
+          </h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Parameters</th>
+                <th>Type</th>
+                <th>Desc</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>code</td>
+                <td>string</td>
+                <td>状态码，S00：查询成功，E00：查询失败</td>
+              </tr>
+              <tr>
+                <td>message</td>
+                <td>string</td>
+                <td>返回消息说明</td>
+              </tr>
+              <tr>
+                <td>data</td>
+                <td>object</td>
+                <td>数据对象</td>
+              </tr>
+              <tr>
+                <td>status</td>
+                <td>int</td>
+                <td>订单状态,-1 未知，0=支付失败，1=支付成功，2=进行中</td>
+              </tr>
+              <tr>
+                <td>callbackNoticeStatus</td>
+                <td>int</td>
+                <td>回调通知状态,0=未回调，1=回调成功，2=回调失败</td>
+              </tr>
+              <tr>
+                <td>requestedAmount</td>
+                <td>string</td>
+                <td>提交金额</td>
+              </tr>
+              <tr>
+                <td>actualAmount</td>
+                <td>string</td>
+                <td>实际到账金额</td>
+              </tr>
+              <tr>
+                <td>createdAt</td>
+                <td>string</td>
+                <td>订单创建日期</td>
+              </tr>
+              <tr>
+                <td>completedAt</td>
+                <td>string</td>
+                <td>订单完结日期</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <footer class="page-edit">
+          <!---->
+          <!---->
+        </footer>
+        <div class="page-nav">
+          <p class="inner"><span class="prev">
+              ←
+              <a href="/api-document/2_withdrawal/3_withdrawal_callback.html" class="prev">
+                提款代付回调_商户接口说明
+              </a></span> <span class="next"><a href="/api-document/6_withdrawal_query/">
+                提款代付查询 (尚未开放 无法使用)
+              </a>
+              →
+            </span></p>
+        </div>
+      </main>
+    </div>
+    <div class="global-ui"></div>
+  </div>
+  <script src="/assets/js/app.195ffeed.js" defer></script>
+  <script src="/assets/js/2.2defd20b.js" defer></script>
+  <script src="/assets/js/14.0d9d93e7.js" defer></script>
+</body>
+
 </html>
